@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using WbMediaConfig;
 using WbMediaCore.Entities;
 
 namespace WbMediaCore.Services

@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WbMediaConfig\WbMediaConfig.csproj" />
     <ProjectReference Include="..\WbMediaCore\WbMediaCore.csproj" />
   </ItemGroup>
 

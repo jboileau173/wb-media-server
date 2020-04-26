@@ -1,4 +1,4 @@
-﻿namespace WbMediaConfig
+﻿namespace WbMediaCore
 {
     public class LocationOptions : ILocationOptions
     {
