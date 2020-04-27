@@ -1,4 +1,6 @@
-﻿using WbMediaModels;
+﻿using System;
+using System.Collections.Generic;
+using WbMediaModels;
 
 namespace WbMediaCore.Repositories
 {
@@ -7,5 +9,7 @@ namespace WbMediaCore.Repositories
         File GetByGuid(string guid);
 
         void DeleteByGuid(string guid);
+
+        List<File> Search(string query);
     }
 }

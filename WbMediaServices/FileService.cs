@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Linq.Expressions;
 using WbMediaCore.Configurations.Interfaces;
 using WbMediaCore.Entities;
 using WbMediaCore.Repositories;
@@ -56,9 +59,14 @@ namespace WbMediaServices
         {
             var file = this.GetByGuid(guid);
 
-            File.Delete(file.Path);
+            System.IO.File.Delete(file.Path);
 
             this.DeleteById(file.FileId);
+        }
+
+        public List<WbMediaModels.File> Search(string query)
+        {
+            return _mediaRepository.Search(query);
         }
     }
 }

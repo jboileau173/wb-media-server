@@ -12,21 +12,26 @@ namespace WbMediaApi.Controllers
     public class FileController : ControllerBase
     {
         [HttpGet]
+        [Route("info/{guid}")]
+        public ActionResult<GetFileInfoByGuidResponse> GetFileInfoByGuid(
+            [FromServices] IFeature<GetFileInfoByGuidRequest, GetFileInfoByGuidResponse> getFileInfoByGuidFeature,
+            string guid)
+        {
+            getFileInfoByGuidFeature.Execute(new GetFileInfoByGuidRequest() { Guid = guid });
+
+            return getFileInfoByGuidFeature.Result;
+        }
+
+        [HttpGet]
         [Route("{guid}")]
         public ActionResult<GetFileByGuidResponse> GetByGuid(
             [FromServices] IFeature<GetFileByGuidRequest, GetFileByGuidResponse> getFileByGuidFeature,
-            [FromQuery(Name = "onlyFile")] bool onlyFile,
             string guid)
         {
             getFileByGuidFeature.Execute(new GetFileByGuidRequest() { Guid = guid });
 
-            if (onlyFile)
-            {
-                var stream = new FileStream(getFileByGuidFeature.Result.File.Path, FileMode.Open, FileAccess.Read);
-                return File(stream, getFileByGuidFeature.Result.File.ContentType);
-            }
-
-            return getFileByGuidFeature.Result;
+            var stream = new FileStream(getFileByGuidFeature.Result.File.Path, FileMode.Open, FileAccess.Read);
+            return File(stream, getFileByGuidFeature.Result.File.ContentType);
         }
 
         [HttpPost, DisableRequestSizeLimit]

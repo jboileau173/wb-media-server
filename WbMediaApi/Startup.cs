@@ -9,6 +9,7 @@ using WbMediaCore.Features;
 using WbMediaCore.Features.CreateFileFeature;
 using WbMediaCore.Features.DeleteFileByGuidFeature;
 using WbMediaCore.Features.GetFileByGuidFeature;
+using WbMediaCore.Features.GetFileInfoByGuidFeature;
 using WbMediaCore.Messages;
 using WbMediaCore.Repositories;
 using WbMediaCore.Services;
@@ -104,6 +105,7 @@ namespace WbMediaApi
         private void _registerFeatures(IServiceCollection services)
         {
             services.AddScoped<IFeature<GetFileByGuidRequest, GetFileByGuidResponse>, GetFileByGuidFeature>();
+            services.AddScoped<IFeature<GetFileInfoByGuidRequest, GetFileInfoByGuidResponse>, GetFileInfoByGuidFeature>();
             services.AddScoped<IFeature<CreateFileRequest, CreateFileResponse>, CreateFileFeature>();
             services.AddScoped<IFeature<DeleteFileByGuidRequest, DeleteFileByGuidResponse>, DeleteFileByGuidFeature>();
         }

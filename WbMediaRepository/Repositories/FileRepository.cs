@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using WbMediaCore.Repositories;
 using WbMediaModels;
 using WbMediaRepository.Contexts;
@@ -21,6 +23,12 @@ namespace WbMediaRepository.Repositories
         public File GetByGuid(string guid)
         {
             return _table.FirstOrDefault(f => f.Guid == guid);
+        }
+
+        public List<File> Search(string query)
+        {
+            return _table.Where(f => f.ContentType.Contains(query) || f.FileName.Contains(query))
+                .ToList();
         }
     }
 }
