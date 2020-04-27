@@ -3,8 +3,8 @@ using WbMediaCore.Entities;
 
 namespace WbMediaCore.Messages
 {
-    public class CreateMediaRequest
+    public class CreateFileRequest
     {
-        public List<MediaEntity> Medias { get; set; }
+        public List<FormFileEntity> FormFiles { get; set; }
     }
 }

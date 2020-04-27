@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WbMediaApi", "WbMediaApi\WbMediaApi.csproj", "{B9F3A2FF-5A25-4207-80CA-4D406CE732FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WbMediaCore", "WbMediaCore\WbMediaCore.csproj", "{A0FC9C67-A64B-409A-BB4D-7830F75D5EE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WbMediaCore", "WbMediaCore\WbMediaCore.csproj", "{A0FC9C67-A64B-409A-BB4D-7830F75D5EE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WbMediaModels", "WbMediaModels\WbMediaModels.csproj", "{AE5469A0-242E-4B4D-8130-E08E304EDC52}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WbMediaRepository", "WbMediaRepository\WbMediaRepository.csproj", "{BDEAA38B-4D7A-454A-92F4-D5530929DC55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WbMediaServices", "WbMediaServices\WbMediaServices.csproj", "{5C29A0DC-9F0D-43D1-803A-1B3A457F15DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{A0FC9C67-A64B-409A-BB4D-7830F75D5EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0FC9C67-A64B-409A-BB4D-7830F75D5EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0FC9C67-A64B-409A-BB4D-7830F75D5EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5469A0-242E-4B4D-8130-E08E304EDC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5469A0-242E-4B4D-8130-E08E304EDC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5469A0-242E-4B4D-8130-E08E304EDC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5469A0-242E-4B4D-8130-E08E304EDC52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDEAA38B-4D7A-454A-92F4-D5530929DC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDEAA38B-4D7A-454A-92F4-D5530929DC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDEAA38B-4D7A-454A-92F4-D5530929DC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDEAA38B-4D7A-454A-92F4-D5530929DC55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C29A0DC-9F0D-43D1-803A-1B3A457F15DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C29A0DC-9F0D-43D1-803A-1B3A457F15DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C29A0DC-9F0D-43D1-803A-1B3A457F15DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C29A0DC-9F0D-43D1-803A-1B3A457F15DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

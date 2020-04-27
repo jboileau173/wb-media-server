@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WbMediaCore\WbMediaCore.csproj" />
+    <ProjectReference Include="..\WbMediaRepository\WbMediaRepository.csproj" />
+    <ProjectReference Include="..\WbMediaServices\WbMediaServices.csproj" />
   </ItemGroup>
 
 

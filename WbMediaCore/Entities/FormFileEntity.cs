@@ -2,7 +2,7 @@
 
 namespace WbMediaCore.Entities
 {
-    public class MediaEntity
+    public class FormFileEntity
     {
         public string ContentType { get; set; }
         public string FileName { get; set; }
