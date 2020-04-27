@@ -54,5 +54,21 @@ namespace WbMediaApi.Controllers
 
             return createFileFeature.Result;
         }
+
+        [HttpDelete]
+        [Route("guid")]
+        public ActionResult<DeleteFileByGuidResponse> DeleteByGuid(
+            [FromServices] IFeature<DeleteFileByGuidRequest, DeleteFileByGuidResponse> deleteFileByGuidFeature,
+            string guid)
+        {
+            var request = new DeleteFileByGuidRequest()
+            {
+                guid = guid
+            };
+
+            deleteFileByGuidFeature.Execute(request);
+
+            return deleteFileByGuidFeature.Result;
+        }
     }
 }
