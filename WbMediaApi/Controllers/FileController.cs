@@ -25,7 +25,7 @@ namespace WbMediaApi.Controllers
             getFileByGuidFeature.Execute(request);
 
 
-            using var stream = new FileStream(
+            var stream = new FileStream(
                 getFileByGuidFeature.Result.File.Path,
                 FileMode.Open, FileAccess.Read);
 
