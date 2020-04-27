@@ -8,5 +8,7 @@ namespace WbMediaCore.Services
         File Create(FormFileEntity file);
 
         File GetByGuid(string guid);
+
+        void DeleteByGuid(string guid);
     }
 }
