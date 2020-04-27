@@ -19,7 +19,7 @@ namespace WbMediaCore.Features.GetFileByGuidFeature
         {
             Result = new GetFileByGuidResponse()
             {
-                File = FileMapper.ToEntity(_fileService.GetByGuid(request.guid))
+                File = FileMapper.ToEntity(_fileService.GetByGuid(request.Guid))
             };
         }
     }

@@ -2,6 +2,6 @@
 {
     public class GetFileByGuidRequest
     {
-        public string guid { get; set; }
+        public string Guid { get; set; }
     }
 }
