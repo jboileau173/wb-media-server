@@ -83,5 +83,14 @@ namespace WbMediaApi.Controllers
 
             return searchFileFeature.Result;
         }
+
+        [HttpGet]
+        public ActionResult<GetAllFileResponse> GetAll(
+            [FromServices] IFeature<GetAllFileRequest, GetAllFileResponse> getAllFileFeature)
+        {
+            getAllFileFeature.Execute(new GetAllFileRequest());
+
+            return getAllFileFeature.Result;
+        }
     }
 }
