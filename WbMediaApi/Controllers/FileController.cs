@@ -72,5 +72,16 @@ namespace WbMediaApi.Controllers
 
             return deleteFileByGuidFeature.Result;
         }
+
+        [HttpGet]
+        [Route("search")]
+        public ActionResult<SearchFileResponse> Search(
+            [FromServices] IFeature<SearchFileRequest, SearchFileResponse> searchFileFeature,
+            [FromQuery(Name = "query")] string query)
+        {
+            searchFileFeature.Execute(new SearchFileRequest() { query = query });
+
+            return searchFileFeature.Result;
+        }
     }
 }
