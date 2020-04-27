@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Transactions;
 using WbMediaCore.Entities;
 using WbMediaCore.Mappers;
 using WbMediaCore.Messages;
@@ -21,12 +22,19 @@ namespace WbMediaCore.Features.CreateFileFeature
         {
             var medias = new List<FileEntity>();
 
-            request.FormFiles
-                .ForEach(file => medias.Add(FileMapper.ToEntity(_fileService.Create(file))));
+            using (TransactionScope scope = new TransactionScope())
+            {
+                request.FormFiles
+                    .ForEach(file => medias.Add(FileMapper.ToEntity(_fileService.Create(file))));
+
+                _fileService.Save();
+
+                scope.Complete();
+            }
 
             Result = new CreateFileResponse()
             {
-                Medias = medias
+                Files = medias
             };
         }
     }

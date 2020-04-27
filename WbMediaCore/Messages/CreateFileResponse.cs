@@ -5,6 +5,6 @@ namespace WbMediaCore.Messages
 {
     public class CreateFileResponse
     {
-        public List<FileEntity> Medias { get; set; }
+        public List<FileEntity> Files { get; set; }
     }
 }

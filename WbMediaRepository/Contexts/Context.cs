@@ -23,6 +23,7 @@ namespace WbMediaRepository.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseLazyLoadingProxies();
             optionsBuilder.UseNpgsql($"Server={_databaseOptions.Server};Database={_databaseOptions.Database};User Id={_databaseOptions.UserId};Password={_databaseOptions.Password};");
         }
     }
