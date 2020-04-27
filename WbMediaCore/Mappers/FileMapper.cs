@@ -15,7 +15,8 @@ namespace WbMediaCore.Mappers
                 Guid = model.Guid,
                 ContentType = model.ContentType,
                 FileName = model.FileName,
-                Length = model.Length
+                Length = model.Length,
+                Path = model.Path
             };
         }
     }

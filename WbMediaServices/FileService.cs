@@ -46,5 +46,10 @@ namespace WbMediaServices
                 Guid = guid
             });
         }
+
+        public WbMediaModels.File GetByGuid(string guid)
+        {
+            return _mediaRepository.GetByGuid(guid);
+        }
     }
 }

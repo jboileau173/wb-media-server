@@ -47,9 +47,6 @@ namespace WbMediaRepository.Repositories
 
         public virtual T Update(T ressource)
         {
-            //_table.Attach(ressource);
-            //_context.Entry(ressource).State = EntityState.Modified;
-
             _table.Update(ressource);
             Save();
 
