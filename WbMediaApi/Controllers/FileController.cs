@@ -56,7 +56,7 @@ namespace WbMediaApi.Controllers
         }
 
         [HttpDelete]
-        [Route("guid")]
+        [Route("{guid}")]
         public ActionResult<DeleteFileByGuidResponse> DeleteByGuid(
             [FromServices] IFeature<DeleteFileByGuidRequest, DeleteFileByGuidResponse> deleteFileByGuidFeature,
             string guid)
