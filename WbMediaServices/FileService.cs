@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using WbMediaCore.Configurations;
+using WbMediaCore.Configurations.Interfaces;
 using WbMediaCore.Entities;
 using WbMediaCore.Repositories;
 using WbMediaCore.Services;

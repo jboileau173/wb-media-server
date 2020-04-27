@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WbMediaCore.Configurations;
+using WbMediaCore.Configurations.Interfaces;
 using WbMediaCore.Features;
 using WbMediaCore.Features.CreateFileFeature;
 using WbMediaCore.Messages;

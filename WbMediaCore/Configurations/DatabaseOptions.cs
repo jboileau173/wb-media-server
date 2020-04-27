@@ -1,4 +1,6 @@
-﻿namespace WbMediaCore.Configurations
+﻿using WbMediaCore.Configurations.Interfaces;
+
+namespace WbMediaCore.Configurations
 {
     public class DatabaseOptions : IDatabaseOptions
     {

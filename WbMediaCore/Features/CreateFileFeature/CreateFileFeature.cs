@@ -22,10 +22,7 @@ namespace WbMediaCore.Features.CreateFileFeature
             var medias = new List<FileEntity>();
 
             request.FormFiles
-                .ForEach(file =>
-                {
-                    medias.Add(FileMapper.ToEntity(_fileService.Create(file)));
-                });
+                .ForEach(file => medias.Add(FileMapper.ToEntity(_fileService.Create(file))));
 
             Result = new CreateFileResponse()
             {

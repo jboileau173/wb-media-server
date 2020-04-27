@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WbMediaCore.Configurations;
+using WbMediaCore.Configurations.Interfaces;
 using WbMediaModels;
 using WbMediaRepository.ModelConfigurations;
 

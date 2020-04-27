@@ -1,4 +1,4 @@
-﻿namespace WbMediaCore.Configurations
+﻿namespace WbMediaCore.Configurations.Interfaces
 {
     public interface ILocationOptions
     {
