@@ -54,7 +54,11 @@ namespace WbMediaServices
 
         public void DeleteByGuid(string guid)
         {
-            _mediaRepository.DeleteByGuid(guid);
+            var file = this.GetByGuid(guid);
+
+            File.Delete(file.Path);
+
+            this.DeleteById(file.FileId);
         }
     }
 }
